@@ -1,0 +1,22 @@
+# Example only. The bot runs on the SAME VPS it monitors.
+check_interval_seconds: 300
+cpu_alert_percent: 95
+memory_alert_percent: 90
+disk_alert_percent: 90
+expiry_reminder_days: [14, 7, 3, 1, 0]
+
+servers:
+  - id: primary
+    name: "VPS · Example"
+    enabled: true
+    mode: local
+    host: null
+    port: 22
+    username: vpsmonitor
+    key_path: "~/.ssh/vps-monitor"
+    provider: "Aeza.net"
+    tariff: "Not specified"
+    price: "Not specified"
+    expires_at: null
+    # Example systemd unit names; configure only services that actually exist on your VPS.
+    services: [ssh, cron]

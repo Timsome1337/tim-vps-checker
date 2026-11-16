@@ -1,0 +1,47 @@
+# Secrets, runtime configuration and credentials
+.env
+.env.*
+!.env.example
+config.yaml
+*.pem
+*.key
+*.p12
+*.pfx
+*.ovpn
+*.conf.private
+id_rsa*
+id_ed25519*
+**/.ssh/
+
+# Live state, metrics, archives and local backups
+data/
+backups/
+backup/
+*.sqlite
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+*.jsonl
+*.log
+logs/
+*.bak
+*.backup
+*.tar.gz
+*.zip
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+*.egg-info/
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

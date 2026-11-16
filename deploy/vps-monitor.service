@@ -1,0 +1,25 @@
+[Unit]
+Description=Private Telegram VPS Monitor
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=YOUR_LINUX_USER
+WorkingDirectory=/opt/VPS_Telegram_Monitor
+ExecStart=/opt/VPS_Telegram_Monitor/.venv/bin/python /opt/VPS_Telegram_Monitor/bot.py
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONDONTWRITEBYTECODE=1
+# Keep Matplotlib font/cache files inside the explicitly writable data directory.
+Environment=MPLCONFIGDIR=/opt/VPS_Telegram_Monitor/data/.mplconfig
+Restart=on-failure
+RestartSec=10
+UMask=0077
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=-/opt/VPS_Telegram_Monitor/data
+
+[Install]
+WantedBy=multi-user.target

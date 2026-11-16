@@ -1,0 +1,6 @@
+python-telegram-bot[job-queue]>=22.8,<23
+paramiko>=3.5,<5
+PyYAML>=6.0,<7
+python-dotenv>=1.0,<2
+matplotlib>=3.8,<4
+numpy>=1.26,<3
